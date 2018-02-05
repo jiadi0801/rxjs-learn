@@ -23,7 +23,7 @@ const evenNumbers = Rx.Observable.create(observer => {
     return () => clearInterval(interval);
 });
 
-const subscribe1 = evenNumbers.subscribe(console.log);
+const subscribe1 = evenNumbers.subscribe(console.log);  // 这个就是observer.next
 
 setTimeout(() => {
     subscribe1.unsubscribe();

@@ -5,6 +5,7 @@ const ee = new Emitter();
 
 /**
  * expand得到的observable是不能重复发射值的，
+ * expand将递归参数函数返回的observable
  */
 const source = Rx.Observable.fromEvent(ee, 'click');
 
